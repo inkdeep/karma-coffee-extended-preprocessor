@@ -1,6 +1,6 @@
 # karma-coffee-extended-preprocessor
 
-> Preprocessor to compile CoffeeScript on the fly.
+> Preprocessor to transform and compile CoffeeScript on the fly.
 
 ## Installation
 
