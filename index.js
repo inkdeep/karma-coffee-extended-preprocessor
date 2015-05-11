@@ -14,6 +14,8 @@ var createCoffeePreprocessor = function(args, config, logger, helper) {
     return filepath.replace(/\.coffee$/, '.js');
   };
 
+  var transformContent =  args.transformContent || config.transformContent || false;
+
   return function(content, file, done) {
     var result = null;
     var map;
@@ -21,6 +23,13 @@ var createCoffeePreprocessor = function(args, config, logger, helper) {
 
     log.debug('Processing "%s".', file.originalPath);
     file.path = transformPath(file.originalPath);
+
+    if (transformContent) {
+      var transformedContent = transformContent(content);
+      if (transformedContent) {
+        content = transformedContent;
+      }
+    }
 
     // Clone the options because coffee.compile mutates them
     var opts = helper._.clone(options)

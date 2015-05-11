@@ -1,4 +1,4 @@
-# karma-coffee-preprocessor
+# karma-coffee-extended-preprocessor
 
 > Preprocessor to compile CoffeeScript on the fly.
 
@@ -38,6 +38,11 @@ module.exports = function(config) {
       // transforming the filenames
       transformPath: function(path) {
         return path.replace(/\.coffee$/, '.js');
+      },
+      // transforming the coffee file content
+      transformContent: function(content) {
+        var replacement = "# this could be any valid coffeescript you want compiled only for the karma test run";
+        return content.replace(/PATTERN_TO_MATCH/, replacement);
       }
     }
   });

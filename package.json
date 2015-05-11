@@ -1,14 +1,14 @@
 {
-  "name": "karma-coffee-preprocessor",
+  "name": "karma-coffee-extended-preprocessor",
   "version": "0.2.1",
-  "description": "A Karma plugin. Compile coffee script on the fly.",
+  "description": "A Karma plugin. Transform and Compile coffee script on the fly.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/karma-runner/karma-coffee-preprocessor.git"
+    "url": "git://github.com/inkdeep/karma-coffee-extended-preprocessor.git"
   },
   "keywords": [
     "karma-plugin",
